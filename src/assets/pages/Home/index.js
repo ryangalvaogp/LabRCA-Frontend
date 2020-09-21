@@ -59,7 +59,7 @@ export default function Homes (){
           <body class="bg-light">
           <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container"> 
-                          <button class="navbar-toggler navbar-toggler-LEFT border-0" type="button" data-toggle="collapse" data-target="#navbar12">  
+                          <button class="navbar-toggler navbar-toggler-LEFT border-0 invisible" type="button" data-toggle="collapse" data-target="#navbar12">  
                           <span class="navbar-toggler-icon " aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}/>
                             </button>
                             <Menu data-toggle="collapse" data-target=".navbar-collapse" 
@@ -68,6 +68,7 @@ export default function Homes (){
                                   keepMounted
                                   open={Boolean(anchorEl)}
                                   onClose={handleClose}
+                                 
                                 >
                                   <MenuItem  onClick={login}> <FiLogIn color="Green"/>  Login</MenuItem>
                                   <MenuItem onClick={registrar}> <FiUserPlus color="blue"/>  Registrar</MenuItem>
@@ -82,17 +83,17 @@ export default function Homes (){
                                 <li class="nav-item"> <Link to="/"> <FiHome class="fihome"/></Link> </li>
                                 <li class="nav-item"> <Link class="nav-link" to="#">Contato</Link> </li>
                               </ul>
-                              <ul class="navbar-nav">
-                                
-                              
-                              <li class="nav-item"> <Link class="nav-link"  to="/login">Login <FiLogIn class="FiLogIn"/></Link> </li>
-                <li class="nav-item"> <Link class="nav-link text-primary" to="/register"><FiUserPlus/>  Registrar</Link></li>
-
-               
-                             
-                              
-                              
+                              <ul class="navbar-nav invisible">
+                              <li class="nav-item"> 
+                                  <Link class="nav-link"  to="/login">Login <FiLogIn class="FiLogIn"/></Link> 
+                              </li>
+                            
+                             <li class="nav-item"> 
+                                   <Link class="nav-link text-primary" to="/register"><FiUserPlus/>  Registrar</Link>
+                             </li>
                               </ul>
+
+
                             </div>
                           </div>
                         </nav>
@@ -102,7 +103,7 @@ export default function Homes (){
                     <div class="mx-auto col-lg-11 col-md-10" >
                       <h1 class="mb-4 display-3" >Laboratório de Robótica e Computação Aplicada</h1>
                       <h1 class="mb-4 display-4" >IFPA - Campus Paragominas</h1>
-                     <Link  to="#P" class="btn btn-lg btn-primary mx-1"> Veja mais</Link> 
+                     <a href="#P"  class="btn btn-lg btn-primary mx-1"> Veja mais</a> 
                      
                     </div>
                   </div>
@@ -131,8 +132,8 @@ export default function Homes (){
                   </div>
                 </div>
               </div>
-<div class="container">
-<div class="row ">
+<div class="container py-5">
+<div class="row py-5">
 
 <div class="mx-auto col-lg-11">
 
@@ -191,31 +192,32 @@ interval="6000">
 
 
 
-              <div class="py-3  vh-25 " >
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-12 text-center"> <i class="d-block fa fa-stop-circle mb-3 text-muted fa-3x"></i>
-                      <p> <Link to="https://goo.gl/maps/AUq7b9W7yYJ2" target="_blank"> Fake street, 100 <p>NYC - 20179, USA</p></Link> </p>
-                      <p> <Link to="tel:+246 - 542 550 5462">+1 - 256 845 87 86</Link> </p>
-                      <p class="mb-0"> <Link to="mailto:info@pingendo.com">info@pingendo.com</Link> </p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12 d-flex align-items-center justify-content-center my-3"> <Link to="#">
-                        <FiFacebook class="d-block fa fa-facebook-official text-muted fa-lg mr-2"/>
-                      </Link> <Link to="#">
-                        <FiInstagram class="d-block fa fa-instagram text-muted fa-lg mx-2"/>
-                      </Link> <Link to="#">
-                        <FiDownload class="d-block fa fa-google-plus-official text-muted fa-lg mx-2"/>
-                      </Link> </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12 text-center">
-                      <p class="mb-0">© 2020 - Laboratório de Informática Campus Paragominas</p>
-                    </div>
-                  </div>
+<div class="py-4">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-center"> <i class="d-block fa fa-stop-circle mb-3 text-muted fa-3x"></i>
+                  <p> <a  target="_blank"  href="https://ifpa.edu.br" target="_blank"> Endereço do Campus, 100 <p>complemento, Brasil</p></a> </p>
+                  <p> <a    href="tel:+55 91 984126548">+55 91 984126548</a> </p>
+                  <p class="mb-0"> <a  target="_blank"  href="mailto:emaildoProjeto.com">emaildoProjeto@gmail.com</a> </p>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-md-12 d-flex align-items-center justify-content-center my-3"> <a  target="_blank"  href="#">
+                    <FiFacebook class="d-block fa fa-facebook-official text-muted fa-lg mr-2"/>
+                  </a> <a  target="_blank"  href="#">
+                    <FiInstagram class="d-block fa fa-instagram text-muted fa-lg mx-2"/>
+                  </a> <a  target="_blank"  href="#">
+                    <FiDownload class="d-block fa fa-google-plus-official text-muted fa-lg mx-2"/>
+                  </a> </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <p class="mb-0">© 2020 - Laboratório de Informática Campus Paragominas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+   
               </body>
                 )
     }else{
@@ -249,25 +251,27 @@ interval="6000">
                             </div>
                           </div>
                         </nav>
-              <div id="i" class="py-5 text-center text-white vh-100 align-items-center d-flex i">
+                        <div id="i" class="py-5 text-center text-white min-vh-100 align-items-center d-flex i ">
                 <div class="container py-5">
                   <div class="row">
-                  <div class="mx-auto col-lg-11 col-md-10" >
-                      <h1 class="mb-4 display-3" >Laboratório de Informática</h1>
+                    <div class="mx-auto col-lg-11 col-md-10" >
+                      <h1 class="mb-4 display-3" >Laboratório de Robótica e Computação Aplicada</h1>
                       <h1 class="mb-4 display-4" >IFPA - Campus Paragominas</h1>
-                      <Link to="#" class="btn btn-lg btn-primary mx-1">Take me there</Link> <Link class="btn btn-lg btn-primary mx-1" to="#">Let's Go</Link>
+                     <a href="#P"  class="btn btn-lg btn-primary mx-1"> Veja mais</a> 
+                     
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="py-5 text-center  vh-100 ">
+              <div class="py-5 text-center   ">
                 <div class="container">
                   <div class="row">
                     <div class="mx-auto col-lg-10">
                       <div class="row">
                         <div class="col-md-6 px-5 mt-3"> <i class="d-block fa fa-stop-circle fa-4x mb-3 text-muted"></i>
                           <h4>Visualizar Projetos</h4>
-                          <p class="mb-3">Os projetos do laborátio são responsáveis por integrar os alunos de informática do campus, Link atividade de pesquisa tecnológica, desenvolvida nos âmbitos do Campus.</p> <Link class="btn btn-outline-primary" to="#">Projetos</Link>
+                          <p class="mb-3">Os projetos do laborátio são responsáveis por integrar os alunos de informática do campus, Link atividade de pesquisa tecnológica, desenvolvida nos âmbitos do Campus.</p> 
+                          <Link class="btn btn-outline-primary" to="/projetos">Projetos</Link>
                         </div>
                         <div class="col-md-6 px-5 mt-3">
                           <i class="d-block fa fa-stop-circle-o fa-4x mb-3 text-muted"></i>
@@ -275,7 +279,7 @@ interval="6000">
                           <p class="mb-3">Os eventos fazem parte do calendário institucional
                            e acadêmico, visando Link promoção destes afim de apresentar
                             trabalhos, projetos e incentivar Link inclusão tecnológica.&nbsp;
-                            </p> <Link class="btn btn-outline-primary" to="#">Eventos</Link>
+                            </p> <Link class="btn btn-outline-primary" to="/eventos">Eventos</Link>
                         </div>
                       </div>
                     </div>
@@ -289,30 +293,31 @@ interval="6000">
 
 
               <div class="py-3 vh-25">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-12 text-center"> <i class="d-block fa fa-stop-circle mb-3 text-muted fa-3x"></i>
-                      <p> <Link to="https://goo.gl/maps/AUq7b9W7yYJ2" target="_blank"> Fake street, 100 <p>NYC - 20179, USA</p></Link> </p>
-                      <p> <Link to="tel:+246 - 542 550 5462">+1 - 256 845 87 86</Link> </p>
-                      <p class="mb-0"> <Link to="mailto:info@pingendo.com">info@pingendo.com</Link> </p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12 d-flex align-items-center justify-content-center my-3"> <Link to="#">
-                        <FiFacebook class="d-block fa fa-facebook-official text-muted fa-lg mr-2"/>
-                      </Link> <Link to="#">
-                        <FiInstagram class="d-block fa fa-instagram text-muted fa-lg mx-2"/>
-                      </Link> <Link to="#">
-                        <FiDownload class="d-block fa fa-google-plus-official text-muted fa-lg mx-2"/>
-                      </Link> </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12 text-center">
-                      <p class="mb-0">© 2020 - Laboratório de Informática Campus Paragominas</p>
-                    </div>
-                  </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-center"> <i class="d-block fa fa-stop-circle mb-3 text-muted fa-3x"></i>
+                  <p> <a  target="_blank"  href="https://ifpa.edu.br" target="_blank"> Endereço do Campus, 100 <p>complemento, Brasil</p></a> </p>
+                  <p> <a    href="tel:+55 91 984126548">+55 91 984126548</a> </p>
+                  <p class="mb-0"> <a  target="_blank"  href="mailto:emaildoProjeto.com">emaildoProjeto@gmail.com</a> </p>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-md-12 d-flex align-items-center justify-content-center my-3"> <a  target="_blank"  href="#">
+                    <FiFacebook class="d-block fa fa-facebook-official text-muted fa-lg mr-2"/>
+                  </a> <a  target="_blank"  href="#">
+                    <FiInstagram class="d-block fa fa-instagram text-muted fa-lg mx-2"/>
+                  </a> <a  target="_blank"  href="#">
+                    <FiDownload class="d-block fa fa-google-plus-official text-muted fa-lg mx-2"/>
+                  </a> </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <p class="mb-0">© 2020 - Laboratório de Informática Campus Paragominas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+   
               </body>
                 )
 
